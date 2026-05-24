@@ -5,6 +5,8 @@ from sqlalchemy import pool
 from src.utils.settings import settings
 from src.product.models import ProductModel
 from src.cart.models import CartModel
+from src.order.models import OrderModel, OrderItemModel
+from src.user.models import UserModel
 from src.utils.db import Base
 
 from alembic import context
@@ -18,7 +20,7 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-config.set_main_option("sqlalchemy.url",settings.DB_CONNECTION)
+config.set_main_option("sqlalchemy.url", "postgresql://postgres:fastapi123@localhost:5432/ecommerce_db")
 
 # add your model's MetaData object here
 # for 'autogenerate' support

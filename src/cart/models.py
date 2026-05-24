@@ -12,3 +12,4 @@ class CartModel(Base):
     quantity = Column(Integer,default=1)
 
     product = relationship("ProductModel")
+    product = relationship("ProductModel", backref="cart_items")
