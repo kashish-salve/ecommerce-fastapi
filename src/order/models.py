@@ -14,6 +14,7 @@ class OrderModel(Base):
     status = Column(String,default="pending")
     user = relationship("UserModel", back_populates="orders")
     items = relationship("OrderItemModel", back_populates="order")
+    payments = relationship("PaymentModel",back_populates="order")
 
 
 class OrderItemModel(Base):

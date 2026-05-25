@@ -7,6 +7,7 @@ from src.product.models import ProductModel
 from src.cart.models import CartModel
 from src.order.models import OrderModel, OrderItemModel
 from src.user.models import UserModel
+from src.payment.models import PaymentModel
 from src.utils.db import Base
 
 from alembic import context
