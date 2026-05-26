@@ -21,7 +21,8 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-config.set_main_option("sqlalchemy.url", "postgresql://postgres:fastapi123@localhost:5432/ecommerce_db")
+
+config.set_main_option("sqlalchemy.url", settings.DB_CONNECTION)
 
 # add your model's MetaData object here
 # for 'autogenerate' support

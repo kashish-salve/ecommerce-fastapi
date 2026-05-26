@@ -4,6 +4,8 @@ from src.product.routes import product_routes
 from src.cart.routes import cart_routes
 from src.order.routes import order_routes
 from src.payment.routes import payment_routes
+from src.user.routes import user_routes
+
 
 Base.metadata.create_all(engine)
 
@@ -13,3 +15,4 @@ app.include_router(product_routes)
 app.include_router(cart_routes)
 app.include_router(order_routes)
 app.include_router(payment_routes)
+app.include_router(user_routes)

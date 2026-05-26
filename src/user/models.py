@@ -9,7 +9,8 @@ class UserModel(Base):
 
     id = Column(Integer,primary_key=True,index=True)
     name = Column(String)
+    username = Column(String,nullable=False)
     email = Column(String,unique=True)
-    password = Column(String)
+    hash_password = Column(String,nullable=False)
     
     orders = relationship("OrderModel", back_populates="user")
